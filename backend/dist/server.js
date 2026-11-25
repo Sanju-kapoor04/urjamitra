@@ -12,11 +12,21 @@ const bcryptjs_1 = __importDefault(require("bcryptjs"));
 const multer_1 = __importDefault(require("multer"));
 const axios_1 = __importDefault(require("axios"));
 const database_js_1 = require("./database.js");
+const dbConnection_js_1 = require("./dbConnection.js");
 const app = (0, express_1.default)();
 const PORT = process.env.PORT || 5000;
 const JWT_SECRET = process.env.JWT_SECRET || 'urjamitra_super_secret_key_2026';
 const AI_SERVICE_URL = process.env.AI_SERVICE_URL || 'http://127.0.0.1:8001';
-(0, database_js_1.initDb)();
+(0, dbConnection_js_1.connectDatabase)();
+app.get('/api/health', (req, res) => {
+    res.json({
+        product: 'UrjaMitra',
+        tagline: 'Your Smart Utility Companion.',
+        storage_engine: (0, dbConnection_js_1.getStorageMode)(),
+        status: 'operational',
+        timestamp: new Date().toISOString()
+    });
+});
 app.use((0, cors_1.default)());
 app.use(express_1.default.json());
 // Uploads setup

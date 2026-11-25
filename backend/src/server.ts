@@ -6,14 +6,25 @@ import jwt from 'jsonwebtoken';
 import bcrypt from 'bcryptjs';
 import multer from 'multer';
 import axios from 'axios';
-import { db, initDb } from './database.js';
+import { db } from './database.js';
+import { connectDatabase, getStorageMode } from './dbConnection.js';
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 const JWT_SECRET = process.env.JWT_SECRET || 'urjamitra_super_secret_key_2026';
 const AI_SERVICE_URL = process.env.AI_SERVICE_URL || 'http://127.0.0.1:8001';
 
-initDb();
+connectDatabase();
+
+app.get('/api/health', (req: Request, res: Response) => {
+  res.json({
+    product: 'UrjaMitra',
+    tagline: 'Your Smart Utility Companion.',
+    storage_engine: getStorageMode(),
+    status: 'operational',
+    timestamp: new Date().toISOString()
+  });
+});
 
 app.use(cors());
 app.use(express.json());

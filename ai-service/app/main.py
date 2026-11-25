@@ -585,7 +585,9 @@ def ai_assistant_chat(req: ChatRequest):
     provider = bill.get("provider_name") or "Indian Power DISCOM"
 
     # Intent analysis
-    is_hindi = lang == "hi" or any(w in msg for w in ["kya", "kyu", "kaise", "bijli", "bill", "bachaye", "hindi"])
+    # Check if user specifically requested Hindi or provided Hindi words
+    hindi_keywords = ["kya", "kyu", "kaise", "bijli", "bachaye", "hindi"]
+    is_hindi = lang == "hi" or any(re.search(r'\b' + re.escape(w) + r'\b', msg) for w in hindi_keywords)
 
     if "why" in msg and ("high" in msg or "increase" in msg or "jyada" in msg or "badha" in msg):
         if is_hindi:
