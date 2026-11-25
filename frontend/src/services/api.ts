@@ -1,7 +1,12 @@
 import axios from 'axios';
 
+// In production, fallback to VITE_API_BASE_URL if set; otherwise use relative /api
+const baseURL = import.meta.env.VITE_API_BASE_URL
+  ? `${import.meta.env.VITE_API_BASE_URL.replace(/\/+$/, '')}/api`
+  : '/api';
+
 const api = axios.create({
-  baseURL: '/api'
+  baseURL
 });
 
 api.interceptors.request.use((config) => {
