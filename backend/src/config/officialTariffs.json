@@ -1,0 +1,97 @@
+[
+  {
+    "id": "trf_mp_dom_fy26",
+    "state": "Madhya Pradesh",
+    "discom": "MPMKVVCL / MPPKVVCL / MPPKVVCL West",
+    "category": "Domestic",
+    "connection_type": "LT-1 Domestic Single Phase (up to 3 kW)",
+    "sanctioned_load_basis": "per kW per month",
+    "fixed_charge": 85.0,
+    "duty_percent": 9.0,
+    "fppca_unit_rate": 0.25,
+    "slabs": [
+      { "min_units": 0, "max_units": 50, "rate_per_unit": 4.15 },
+      { "min_units": 51, "max_units": 150, "rate_per_unit": 5.05 },
+      { "min_units": 151, "max_units": 300, "rate_per_unit": 6.45 },
+      { "min_units": 301, "max_units": null, "rate_per_unit": 7.10 }
+    ],
+    "effective_start_date": "2026-04-01",
+    "effective_end_date": "2027-03-31",
+    "source_url": "https://mperc.in/orders/retail-tariff-order-fy2026-27.pdf",
+    "source_document": "MPERC Retail Tariff Order FY2026-27 (Table 4.12)",
+    "last_verified_date": "2026-11-01",
+    "verification_status": "Official Verified",
+    "is_illustrative": false
+  },
+  {
+    "id": "trf_delhi_brpl_fy26",
+    "state": "Delhi",
+    "discom": "BSES Rajdhani Power Limited (BRPL)",
+    "category": "Domestic",
+    "connection_type": "Domestic Lighting (DL) Single Phase",
+    "sanctioned_load_basis": "per kW per month",
+    "fixed_charge": 20.0,
+    "duty_percent": 5.0,
+    "fppca_unit_rate": 0.35,
+    "slabs": [
+      { "min_units": 0, "max_units": 200, "rate_per_unit": 3.00 },
+      { "min_units": 201, "max_units": 400, "rate_per_unit": 4.50 },
+      { "min_units": 401, "max_units": 800, "rate_per_unit": 6.50 },
+      { "min_units": 801, "max_units": 1200, "rate_per_unit": 7.00 },
+      { "min_units": 1201, "max_units": null, "rate_per_unit": 8.00 }
+    ],
+    "effective_start_date": "2026-04-01",
+    "effective_end_date": "2027-03-31",
+    "source_url": "https://derc.gov.in/tariff/tariff-orders/fy2026-27-brpl.pdf",
+    "source_document": "DERC Tariff Order FY2026-27 for BRPL (Schedule 1)",
+    "last_verified_date": "2026-10-15",
+    "verification_status": "Official Verified",
+    "is_illustrative": false
+  },
+  {
+    "id": "trf_maharashtra_msedcl_fy26",
+    "state": "Maharashtra",
+    "discom": "Maharashtra State Electricity Distribution Co Ltd (MSEDCL)",
+    "category": "Domestic",
+    "connection_type": "LT-1 Residential (Single/Three Phase)",
+    "sanctioned_load_basis": "per connection per month",
+    "fixed_charge": 128.0,
+    "duty_percent": 16.0,
+    "fppca_unit_rate": 0.40,
+    "slabs": [
+      { "min_units": 0, "max_units": 100, "rate_per_unit": 4.71 },
+      { "min_units": 101, "max_units": 300, "rate_per_unit": 8.74 },
+      { "min_units": 301, "max_units": 500, "rate_per_unit": 11.68 },
+      { "min_units": 501, "max_units": null, "rate_per_unit": 13.04 }
+    ],
+    "effective_start_date": "2026-04-01",
+    "effective_end_date": "2027-03-31",
+    "source_url": "https://www.mahadiscom.in/wp-content/uploads/2026/04/MERC-Tariff-Order-FY26.pdf",
+    "source_document": "MERC Mid-Term Review Tariff Order FY2026-27",
+    "last_verified_date": "2026-10-20",
+    "verification_status": "Official Verified",
+    "is_illustrative": false
+  },
+  {
+    "id": "trf_bescom_karnataka_fy26",
+    "state": "Karnataka",
+    "discom": "Bangalore Electricity Supply Company (BESCOM)",
+    "category": "Domestic",
+    "connection_type": "LT-2(a) Domestic Non-commercial",
+    "sanctioned_load_basis": "per kW per month",
+    "fixed_charge": 110.0,
+    "duty_percent": 9.0,
+    "fppca_unit_rate": 0.30,
+    "slabs": [
+      { "min_units": 0, "max_units": 100, "rate_per_unit": 4.75 },
+      { "min_units": 101, "max_units": null, "rate_per_unit": 7.00 }
+    ],
+    "effective_start_date": "2026-04-01",
+    "effective_end_date": "2027-03-31",
+    "source_url": "https://kerc.karnataka.gov.in/tariff_orders/bescom-fy2026.pdf",
+    "source_document": "KERC Retail Tariff Order 2026 for BESCOM",
+    "last_verified_date": "2026-11-05",
+    "verification_status": "Official Verified",
+    "is_illustrative": false
+  }
+]
