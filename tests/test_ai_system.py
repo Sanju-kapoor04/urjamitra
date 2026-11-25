@@ -8,8 +8,13 @@ Tests:
 5. UrjaMitra AI Hindi and English chat assistant
 """
 
+import os
+import sys
 import unittest
-from ai-service.app.main import (
+
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../ai-service')))
+
+from app.main import (
     extract_indian_bill_fields,
     detect_anomalies,
     predict_consumption,
